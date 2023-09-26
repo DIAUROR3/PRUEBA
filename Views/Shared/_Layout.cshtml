@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> visual 
+    <title>@ViewData["Title"] - practica_3._1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/practica_3._1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="login.html"><img src="~/Imagenes/logo.png" alt="Logotipo de la Tienda"></a>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Empleados">Empleados</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Bonos">Bonos</a>
+            </li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><img src="~/Imagenes/icono-facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="~/Imagenes/icono-instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="~/Imagenes/icono-twitter.png" alt="Twitter"></a>
+        </div>
+    </nav>
+    <header>
+        <h1>¡Bienvenidos a su Tienda amiga LOS 7!</h1>
+        <p>Donde la calidad y la atención personalizada se unen</p>
+    </header>
+    <div class="banner">
+        <p>¡Descuento del 20% en todos los productos esta semana!</p>
+    </div>
+
+    <div class="container">
+        <div>
+            <main role="main" class="pb-3">
+                @RenderBody()
+                <div class="featured-image">
+                    <div class="carousel">
+                        <img src="~/Imagenes/imagen1.jpg" alt="Imagen 1">
+                        <img src="~/Imagenes/imagen2.jpg" alt="Imagen 2">
+                        <img src="~/Imagenes/imagen3.jpg" alt="Imagen 3">
+                        <img src="~/Imagenes/imagen4.jpg" alt="Imagen 4">
+                        <img src="~/Imagenes/imagen5.jpg" alt="Imagen 5">
+                    </div>
+                </div>
+            </main>
+
+
+
+            <div class="cta-button">
+                <a href="#">Explora Nuestros Productos</a>
+            </div>
+            <div class="special-offer">
+                <p>Oferta Especial: ¡Descuento del 20% en todos los productos!</p>
+            </div>
+            <div class="testimonials">
+                <p>Testimonios de Clientes:</p>
+                <p>"¡Increíble selección de productos! ¡Volveré sin duda!"</p>
+                <p>"La atención al cliente aquí es excepcional. Muy satisfecho."</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
